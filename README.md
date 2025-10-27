@@ -1,7 +1,6 @@
-# MTG Secret Santa
+# MTG Secret Santa <img src="src/assets/logo.png" alt="Logo" height="40">
 
 A Vue 3 application for organizing Magic: The Gathering Secret Santa events with mana color assignments.
-
 ## Features
 
 - Add and manage players for your Secret Santa event
