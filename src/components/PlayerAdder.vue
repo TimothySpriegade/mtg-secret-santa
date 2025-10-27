@@ -9,8 +9,18 @@ const emit = defineEmits<{
 const newPlayerName = ref('')
 const newPlayerEmail = ref('')
 
+const isValidEmail = (email: string): boolean => {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+  return emailRegex.test(email)
+}
+
 const addPlayer = () => {
   if (newPlayerName.value.trim() && newPlayerEmail.value.trim()) {
+    if (!isValidEmail(newPlayerEmail.value.trim())) {
+      alert('Please enter a valid email address')
+      return
+    }
+
     emit('addPlayer', {
       name: newPlayerName.value.trim(),
       email: newPlayerEmail.value.trim()
