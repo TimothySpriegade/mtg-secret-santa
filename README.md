@@ -1,5 +1,40 @@
-# Vue 3 + TypeScript + Vite
+# MTG Secret Santa
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+A Vue 3 application for organizing Magic: The Gathering Secret Santa events with mana color assignments.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## Features
+
+- Add and manage players for your Secret Santa event
+- Assign mana colors and gift reciepient to each player
+- Set minimum mana threshold for assignments
+- Automatic duplicate prevention for mana assignments
+- Local storage persistence for player data and settings
+- Debug mode to view current state
+
+## Project Structure
+```
+src/
+├── components/
+│   ├── DebugOutput.vue      # Debug information display
+│   ├── ManaSelector.vue     # Mana color selection component
+│   ├── PlayerAdder.vue      # Add new players
+│   └── PlayerList.vue       # Display and manage players
+├── composables/
+│   ├── useLocalStorage.ts   # Local storage utilities
+│   └── useManaAssignment.ts # Mana assignment logic
+├── types/
+│   └── player.ts            # Player type definition
+├── views/
+│   └── SecretSanta.vue      # Main view component
+├── assets/
+│   ├── vue.svg              
+│   └── manaicons/           # Mana color icons
+│       ├── black.png
+│       ├── blue.png
+│       ├── green.png
+│       ├── red.png
+│       └── white.png
+├── App.vue                  
+├── main.ts                  
+└── style.css                
+```
