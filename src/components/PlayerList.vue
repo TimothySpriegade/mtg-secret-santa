@@ -35,8 +35,8 @@ const emit = defineEmits<{
 
 .player-item {
   padding: 1rem;
-  background-color: #f9fafb;
-  border: 1px solid #e5e7eb;
+  background-color: #1a1a1a;
+  border: 1px solid #333333;
   border-radius: 0.5rem;
   display: flex;
   justify-content: space-between;
@@ -53,11 +53,11 @@ const emit = defineEmits<{
 
 .player-name {
   font-weight: 500;
-  color: #111827;
+  color: #e0e0e0;
 }
 
 .player-email {
-  color: #6b7280;
+  color: #888888;
   font-size: 0.875rem;
 }
 

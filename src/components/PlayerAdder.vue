@@ -23,26 +23,28 @@ const addPlayer = () => {
 
 <template>
   <div class="player-adder">
-    <div class="input-group">
-      <label for="name">Name</label>
-      <input
-        id="name"
-        v-model="newPlayerName"
-        type="text"
-        class="text-input"
-        placeholder="Enter name"
-      />
-    </div>
+    <div class="inputs-row">
+      <div class="input-group">
+        <label for="name">Name</label>
+        <input
+          id="name"
+          v-model="newPlayerName"
+          type="text"
+          class="text-input"
+          placeholder="Enter name"
+        />
+      </div>
 
-    <div class="input-group">
-      <label for="email">Email</label>
-      <input
-        id="email"
-        v-model="newPlayerEmail"
-        type="email"
-        class="text-input"
-        placeholder="Enter email"
-      />
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input
+          id="email"
+          v-model="newPlayerEmail"
+          type="email"
+          class="text-input"
+          placeholder="Enter email"
+        />
+      </div>
     </div>
 
     <button @click="addPlayer" class="add-button">
@@ -50,6 +52,7 @@ const addPlayer = () => {
         <line x1="12" y1="5" x2="12" y2="19"></line>
         <line x1="5" y1="12" x2="19" y2="12"></line>
       </svg>
+      Add Player
     </button>
   </div>
 </template>
@@ -57,8 +60,13 @@ const addPlayer = () => {
 <style scoped>
 .player-adder {
   display: flex;
+  flex-direction: column;
   gap: 1rem;
-  align-items: flex-end;
+}
+
+.inputs-row {
+  display: flex;
+  gap: 1rem;
 }
 
 .input-group {
@@ -71,32 +79,36 @@ const addPlayer = () => {
 .input-group label {
   font-size: 0.875rem;
   font-weight: 500;
-  color: #374151;
+  color: #e0e0e0;
 }
 
 .text-input {
   padding: 0.625rem 1rem;
   font-size: 1rem;
-  border: 1px solid #d1d5db;
+  border: 1px solid #333333;
   border-radius: 0.5rem;
-  background-color: white;
-  color: #000000;
+  background-color: #1a1a1a;
+  color: #e0e0e0;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
+.text-input::placeholder {
+  color: #888888;
+}
+
 .text-input:hover {
-  border-color: #9ca3af;
+  border-color: #555555;
 }
 
 .text-input:focus {
   outline: none;
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  border-color: #666666;
+  box-shadow: 0 0 0 3px rgba(102, 102, 102, 0.2);
 }
 
 .add-button {
   padding: 0.625rem;
-  background-color: #3b82f6;
+  background-color: #10b981;
   color: white;
   border: none;
   border-radius: 0.5rem;
@@ -104,15 +116,16 @@ const addPlayer = () => {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 0.5rem;
   transition: background-color 0.15s ease-in-out;
-  flex-shrink: 0;
+  width: 100%;
 }
 
 .add-button:hover {
-  background-color: #2563eb;
+  background-color: #059669;
 }
 
 .add-button:active {
-  background-color: #1d4ed8;
+  background-color: #047857;
 }
 </style>

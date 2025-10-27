@@ -45,31 +45,31 @@ const options = [1, 2, 3, 4, 5]
 .input-group label {
   font-size: 0.875rem;
   font-weight: 500;
-  color: #374151;
+  color: #e0e0e0;
 }
 
 .select-input {
   padding: 0.625rem 2.5rem 0.625rem 1rem;
   font-size: 1rem;
-  border: 1px solid #d1d5db;
+  border: 1px solid #333333;
   border-radius: 0.5rem;
-  background-color: white;
-  color: #000000;
+  background-color: #1a1a1a;
+  color: #e0e0e0;
   cursor: pointer;
   appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23374151' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23e0e0e0' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 0.75rem center;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .select-input:hover {
-  border-color: #9ca3af;
+  border-color: #555555;
 }
 
 .select-input:focus {
   outline: none;
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  border-color: #666666;
+  box-shadow: 0 0 0 3px rgba(102, 102, 102, 0.2);
 }
 </style>

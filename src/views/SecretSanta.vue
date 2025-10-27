@@ -8,6 +8,7 @@ import PlayerList from '../components/PlayerList.vue'
 import DebugOutput from '../components/DebugOutput.vue'
 import { useLocalStorage } from '../composables/useLocalStorage'
 import { useManaAssignment } from '../composables/useManaAssignment'
+import Header from "../components/Header.vue";
 
 interface AssignmentDebugInfo {
   timestamp: string
@@ -58,18 +59,17 @@ const handleRemovePlayer = (index: number) => {
   <div class="centered-container">
     <div class="square-content">
       <div class="config-section">
+        <Header></Header>
         <ManaSelector v-model:min="min" v-model:max="max" />
         <PlayerAdder @add-player="handleAddPlayer" />
         <PlayerList :players="players" @remove-player="handleRemovePlayer" />
-
-        <DebugOutput
-          :debug-info="debugInfo"
-          v-model:show-debug="showDebug"
-        />
-
         <button @click="assignManaAndGifts" :disabled="!canAssign">
           Assign Colors & Gifts
         </button>
+        <DebugOutput
+            :debug-info="debugInfo"
+            v-model:show-debug="showDebug"
+        />
       </div>
     </div>
   </div>
