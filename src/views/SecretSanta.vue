@@ -9,6 +9,7 @@ import DebugOutput from '../components/DebugOutput.vue'
 import { useLocalStorage } from '../composables/useLocalStorage'
 import { useManaAssignment } from '../composables/useManaAssignment'
 import Header from "../components/Header.vue";
+import SendMailButton from "../components/SendMailButton.vue";
 
 interface AssignmentDebugInfo {
   timestamp: string
@@ -53,6 +54,8 @@ const handleAddPlayer = (player: Player) => {
 const handleRemovePlayer = (index: number) => {
   players.value.splice(index, 1)
 }
+
+const hasAssignments = computed(() => debugInfo.value !== null)
 </script>
 
 <template>
@@ -66,6 +69,10 @@ const handleRemovePlayer = (index: number) => {
         <button @click="assignManaAndGifts" :disabled="!canAssign">
           Assign Colors & Gifts
         </button>
+        <SendMailButton
+          :players="players"
+          :has-assignments="hasAssignments"
+        />
         <DebugOutput
             :debug-info="debugInfo"
             v-model:show-debug="showDebug"
