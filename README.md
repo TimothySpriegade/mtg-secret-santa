@@ -15,7 +15,6 @@ A Vue 3 application for organizing Magic: The Gathering Secret Santa events with
 ## Project Structure
 ```
 src/
-src/
 ├── components/
 │   ├── DebugOutput.vue       # Debug information display
 │   ├── Header.vue            # Application header
