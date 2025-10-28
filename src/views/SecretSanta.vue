@@ -86,17 +86,18 @@ const hasAssignments = computed(() => debugInfo.value !== null)
 .centered-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   min-height: 100vh;
   width: 100%;
+  padding: 2rem 0;
 }
 
 .square-content {
   width: 85vw;
-  height: 85vh;
+  min-height: 85vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .config-section {
