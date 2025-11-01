@@ -37,7 +37,7 @@ export class EmailSender {
       to_email: player.email,
       from_name: 'MTG Secret Santa',
       gift_recipient_name: giftRecipient.name,
-      gift_recipient_colors: giftRecipient.assignedColors?.join(', ') || 'No colors assigned',
+      gift_recipient_colors: player.assignedColors?.join(', ') || 'No colors assigned',
       event_date: new Date().toLocaleDateString(),
     };
 
